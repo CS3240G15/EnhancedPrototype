@@ -2,6 +2,12 @@ import lejos.nxt.SensorPort;
 
 
 public class Sensor {
+	
+	/**
+	 * Polls the sensor value in real time.
+	 * @param	portName	the port to be polled (1,2,3,4)
+	 * @return	value of the sensor
+	 */
 	public static String TakeReading(String portName){
 		System.out.println(portName);
 		String reading = "";

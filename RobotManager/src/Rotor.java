@@ -3,6 +3,12 @@ import lejos.robotics.navigation.DifferentialPilot;
 
 
 public class Rotor {
+	
+	/**
+	 * Moves an individual motor.
+	 * @param	motorPort	the motor to be moved (A,B,C)
+	 * @param	speed	negative to turn backwards, positive to turn forwards
+	 */
 	public static void MoveMotor(String motorPort, int speed) {
 		if (motorPort.equals("A")) { 
 			//Motor.A.get
@@ -19,6 +25,12 @@ public class Rotor {
 		}
 		
 	}
+	
+	/**
+	 * Moves the robot in a certain direction.
+	 * @param	direction	the direction the robot should move in
+	 * @param	speed	negative to turn backwards, positive to turn forwards
+	 */
 	public static void Move(String direction, int speed) {
 		Manager.pilot.setTravelSpeed(speed);
 		System.out.println(speed);
@@ -45,6 +57,10 @@ public class Rotor {
 			System.out.println("right");
 		}
 	}
+	
+	/**
+	 * Stops the robot.
+	 */
 	public static void Stop() {
 		//StopMovement
 		System.out.println("Stopping");
